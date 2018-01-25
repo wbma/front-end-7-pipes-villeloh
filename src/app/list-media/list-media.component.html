@@ -1,0 +1,13 @@
+<div *ngFor="let entry of this.mediaList">
+  <h2>{{entry['title']}}</h2>
+  <h3>{{entry['description']}}</h3>
+  <img [src]="entry['filename']">
+</div>
+
+<div *ngFor="let stopEntry of this.stopArray">
+  <ul>
+    <li *ngFor="let routeEntry of stopEntry.patterns">
+      {{routeEntry.route.longName}}
+    </li>
+  </ul>
+</div>
